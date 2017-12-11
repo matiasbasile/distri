@@ -108,6 +108,7 @@ public class ListarPedidosAdapter extends BaseAdapter {
                 intent.putExtra("id_cliente",f.getId_cliente());
                 intent.putExtra("id_factura",factura.getId());
                 intent.putExtra("id_recorrido",0);
+                intent.putExtra("fecha",factura.getFecha());
                 activity.startActivity(intent);
             }
         });

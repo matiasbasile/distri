@@ -31,7 +31,7 @@
                 android:layout_height="match_parent"
                 android:background="#3F51B5"
                 android:onClick="nuevoCliente"
-                android:text="Nuevo Cliente"
+                android:text="&#xf234; Nuevo Cliente"
                 android:textColor="@color/icons" />
 
         </LinearLayout>

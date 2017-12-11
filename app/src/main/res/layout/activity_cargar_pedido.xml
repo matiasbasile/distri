@@ -125,13 +125,12 @@
                     android:ems="10"
                     android:inputType="number" />
 
-                <TextView
+                <Button
                     android:id="@+id/dateDisplay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:clickable="true"
-                    android:drawableRight="@drawable/ic_date_range_black_24dp"
                     android:focusable="false"
                     android:inputType="date"
                     android:maxLines="1"

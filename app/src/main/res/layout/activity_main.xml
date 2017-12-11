@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C5CAE9"
     app:statusBarBackground="?attr/colorButtonNormal"
     tools:context="com.pampa.distribuidorachacabuco.MainActivity">
 
@@ -36,7 +35,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#3F51B5"
-                        android:drawableLeft="@drawable/ic_edit_location_black_24dp"
                         android:text="Zona:"
                         android:textColor="@color/icons" />
 
@@ -62,9 +60,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#3F51B5"
-                        android:drawableLeft="@drawable/ic_person_black_24dp"
                         android:paddingTop="10dp"
-                        android:text="Proximo Cliente:"
+                        android:text="&#xf007; Proximo Cliente:"
                         android:textColor="@color/icons"
                         android:textSize="14sp" />
 
@@ -97,9 +94,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#3F51B5"
-                        android:drawableLeft="@drawable/ic_navigation_black_24dp"
                         android:paddingTop="10dp"
-                        android:text="Direccion:"
+                        android:text="&#xf041; Direccion:"
                         android:textColor="@color/icons"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -159,13 +155,12 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginRight="5dp"
                                 android:background="#3F51B5"
-                                android:drawableTop="@drawable/ic_add_shopping_cart_black_24dp"
-                                android:gravity="center|bottom"
+                                android:gravity="center"
                                 android:onClick="irCargarVisita"
                                 android:paddingBottom="10dp"
-                                android:text="Cargar Visita"
+                                android:text="&#xf0d1; Cargar Visita"
                                 android:textColor="@color/icons"
-                                android:textSize="18sp" />
+                                android:textSize="20sp" />
 
                         </RelativeLayout>
 
@@ -180,13 +175,12 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="5dp"
                                 android:background="#3F51B5"
-                                android:drawableTop="@drawable/ic_person_pin_circle_black_32dp"
-                                android:gravity="center|bottom"
+                                android:gravity="center"
                                 android:onClick="irPedidoFueraDeRuta"
                                 android:paddingBottom="10dp"
-                                android:text="Pedido Fuera De Ruta"
+                                android:text="&#xf277; Pedido Fuera De Ruta"
                                 android:textColor="@color/icons"
-                                android:textSize="18sp" />
+                                android:textSize="20sp" />
 
                         </RelativeLayout>
                     </TableRow>
@@ -215,13 +209,12 @@
                                 android:layout_alignParentTop="true"
                                 android:layout_marginRight="5dp"
                                 android:background="#3F51B5"
-                                android:drawableTop="@drawable/ic_folder_black_32dp"
-                                android:gravity="center|bottom"
+                                android:gravity="center"
                                 android:onClick="irListadoPedidos"
                                 android:paddingBottom="10dp"
-                                android:text="Pedidos Cargados"
+                                android:text="&#xf07a; Pedidos Cargados"
                                 android:textColor="@color/icons"
-                                android:textSize="18sp" />
+                                android:textSize="20sp" />
 
                         </RelativeLayout>
 
@@ -231,18 +224,17 @@
                             android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/informacionBtn"
+                                android:id="@+id/enviarBtn"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="5dp"
                                 android:background="#3F51B5"
-                                android:drawableTop="@drawable/ic_cloud_upload_black_48dp"
-                                android:gravity="center|bottom"
+                                android:gravity="center"
                                 android:onClick="enviarServidor2"
                                 android:paddingBottom="10dp"
-                                android:text="Enviar"
+                                android:text="&#xf062; Enviar"
                                 android:textColor="@color/icons"
-                                android:textSize="18sp" />
+                                android:textSize="20sp" />
 
                         </RelativeLayout>
                     </TableRow>
@@ -268,13 +260,12 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginRight="5dp"
                                 android:background="#3F51B5"
-                                android:drawableTop="@drawable/ic_settings_black_48dp"
-                                android:gravity="center|bottom"
+                                android:gravity="center"
                                 android:onClick="irConfiguracion"
                                 android:paddingBottom="10dp"
-                                android:text="Configuracion"
+                                android:text="&#xf0ad; Configuracion"
                                 android:textColor="@color/icons"
-                                android:textSize="18sp" />
+                                android:textSize="20sp" />
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -288,18 +279,17 @@
                             android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/button6"
+                                android:id="@+id/recibirBtn"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="5dp"
                                 android:background="#3F51B5"
-                                android:drawableTop="@drawable/ic_cloud_download_black_24dp"
-                                android:gravity="center|bottom"
+                                android:gravity="center"
                                 android:onClick="inicioDb"
                                 android:paddingBottom="10dp"
-                                android:text="RECIBIR"
+                                android:text="&#xf063; RECIBIR"
                                 android:textColor="@color/icons"
-                                android:textSize="18sp" />
+                                android:textSize="20sp" />
 
                         </RelativeLayout>
                     </TableRow>

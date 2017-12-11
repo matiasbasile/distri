@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
@@ -89,6 +90,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextViewActualClientDire = (TextView) findViewById(R.id.actualDirClientValue);
         TextViewActualClientId=(TextView) findViewById(R.id.actualClientId);
         TextZona = (TextView) findViewById(R.id.textZona);
+        Button cargarVisita = (Button) findViewById(R.id.cargarVisitabtn);
+        Button pedidoFueraRutaBtn = (Button) findViewById(R.id.pedidosFueraRutaBtn);
+        Button pedidosCargadosBtn = (Button) findViewById(R.id.pedidosCargadosBtn);
+        Button recibirBtn = (Button) findViewById(R.id.recibirBtn);
+        Button configuracionBtn = (Button) findViewById(R.id.configuracionBtn);
+        Button enviarBtn = (Button) findViewById(R.id.enviarBtn);
+
+
+
+        cargarVisita.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
+        pedidoFueraRutaBtn.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
+        pedidosCargadosBtn.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
+        recibirBtn.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
+        configuracionBtn.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
+        enviarBtn.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
+
+
         //aca tomamos los valores que vienen del login
         int id_dispositivo = getIntent().getIntExtra("id_dispositivo",0);
         int id_empresa = getIntent().getIntExtra("id_empresa",0);

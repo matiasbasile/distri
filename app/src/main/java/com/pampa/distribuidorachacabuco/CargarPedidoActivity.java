@@ -64,10 +64,7 @@ public class CargarPedidoActivity extends AppCompatActivity implements View.OnCl
     private Articulo articuloActual = null;
     private Cliente clienteActual = null;
 
-    private int dia, mes, anio;
-    Button pickDate;
     TextView dateDisplay;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,20 +103,21 @@ public class CargarPedidoActivity extends AppCompatActivity implements View.OnCl
             // Buscar en la base de datos la factura para editar
             factura = facturaModel.get(id_factura);
             this.facturaItemsArray = factura.getFacturaItemsArray();
+
         }
+
 
         actualClientTextView = (TextView) findViewById(R.id.clientNameTextView);
         actualClientTextView.setText(clienteActual.getNombre());
         observacionesText.setText(factura.getObservaciones());
         repartoTxt.setText(String.valueOf(factura.getReparto()));
         buscarArticulosBtn.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
-
         final ListView listView = (ListView) findViewById(R.id.listViewPedidos);
         txtViewDescripcion = (TextView) findViewById(R.id.txtViewDescripcion);
         tViewPrecio = (TextView) findViewById(R.id.txtViewPrecio);
-
         facturaItemAdapter = new FacturaItemAdapter(this,this.facturaItemsArray);
         listView.setAdapter(facturaItemAdapter);
+
 
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -194,8 +192,8 @@ public class CargarPedidoActivity extends AppCompatActivity implements View.OnCl
         });
 
         //pickDate = (Button)findViewById(R.id.pickDate);
-        //pickDate.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
-        dateDisplay = (TextView)findViewById(R.id.dateDisplay);
+        //dateDisplay.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
+        dateDisplay = (TextView) findViewById(R.id.dateDisplay);
         dateDisplay.setOnClickListener(this);
         dateDisplay.setText(factura.getFecha());
     }
