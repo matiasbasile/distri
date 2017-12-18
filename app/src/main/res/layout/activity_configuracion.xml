@@ -15,18 +15,23 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Recorrido" />
+            android:scrollbarSize="25dp"
+            android:text="Recorrido"
+            android:textSize="18sp" />
 
         <Spinner
             android:id="@+id/recorridoSpinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="60dp"
+            android:scrollbarSize="60dp" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dispositivo" />
+            android:scrollbarSize="25dp"
+            android:text="Dispositivo"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/dispositivoText"
@@ -40,7 +45,9 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="URL" />
+            android:scrollbarSize="25dp"
+            android:text="URL"
+            android:textSize="18sp" />
 
 
         <EditText
@@ -62,23 +69,23 @@
             android:textColor="@color/icons" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#3F51B5"
-            android:onClick="guardar"
-            android:text="Guardar"
-            android:textColor="@color/icons" />
-
-        <Button
             android:id="@+id/btnexport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:background="#3F51B5"
             android:onClick="createCSV"
             android:text="EXPORTAR"
+            android:textColor="@color/icons" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="guardar"
+            android:text="Guardar"
             android:textColor="@color/icons" />
 
     </LinearLayout>

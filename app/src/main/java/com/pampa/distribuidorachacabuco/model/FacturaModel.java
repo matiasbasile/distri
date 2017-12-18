@@ -52,6 +52,8 @@ public class FacturaModel extends AbstractModel {
             factura.setId((int)rowId);
         } else {
             db.execSQL("UPDATE facturas SET observaciones = '"+factura.getObservaciones()+"' WHERE id = "+String.valueOf(factura.getId()));
+            db.execSQL("UPDATE facturas SET fecha = '"+factura.getFecha()+"' WHERE id = "+String.valueOf(factura.getId()));
+            db.execSQL("UPDATE facturas SET hora = '"+factura.getHora()+"' WHERE id = "+String.valueOf(factura.getId()));
             // Borramos todas los items para volverlos a insertar luego
             db.execSQL("DELETE FROM facturaItem WHERE id_factura = "+String.valueOf(factura.getId()));
         }

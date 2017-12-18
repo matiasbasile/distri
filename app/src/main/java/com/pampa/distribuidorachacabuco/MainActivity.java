@@ -86,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
        /* spinner = (Spinner) findViewById(R.id.recorridoSpinner);
         String[] cols = new String[]{"nombre"};
         int[] adapterRows = new int[]{ android.R.id.text1 };*/
+        TextView actualClientDirTextView = (TextView) findViewById(R.id.actualClientDirTextView);
+        TextView actualClienteTw = (TextView) findViewById(R.id.actualClientTextView);
         TextViewActualClientNombre = (TextView) findViewById(R.id.actualClientValue);
         TextViewActualClientDire = (TextView) findViewById(R.id.actualDirClientValue);
         TextViewActualClientId=(TextView) findViewById(R.id.actualClientId);
@@ -97,8 +99,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Button configuracionBtn = (Button) findViewById(R.id.configuracionBtn);
         Button enviarBtn = (Button) findViewById(R.id.enviarBtn);
 
-
-
+        actualClientDirTextView.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
+        actualClienteTw.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
         cargarVisita.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
         pedidoFueraRutaBtn.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
         pedidosCargadosBtn.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
@@ -108,8 +110,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
         //aca tomamos los valores que vienen del login
-        int id_dispositivo = getIntent().getIntExtra("id_dispositivo",0);
-        int id_empresa = getIntent().getIntExtra("id_empresa",0);
+        //int id_dispositivo = getIntent().getIntExtra("id_dispositivo",0);
+        //int id_empresa = getIntent().getIntExtra("id_empresa",0);
 
 
         //spinner de recorrido
@@ -150,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             this.server_url_facturas = "https://"+c.getUrl()+"/sistema/facturas/function/sincronizar/";
             this.dispositivo = c.getDispositivo();
             this.id_recorrido = c.getId_recorrido();
-            TextZona.setText(c.getRecorrido());
+            TextZona.setText("Zona: "+ c.getRecorrido());
         } catch (Exception e) {
             e.printStackTrace();
         }

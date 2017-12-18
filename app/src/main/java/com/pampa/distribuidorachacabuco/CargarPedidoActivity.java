@@ -1,25 +1,16 @@
 package com.pampa.distribuidorachacabuco;
 
-import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnKeyListener;
 import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
+
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -28,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.pampa.distribuidorachacabuco.model.ArticuloModel;
 import com.pampa.distribuidorachacabuco.model.ClienteModel;
 import com.pampa.distribuidorachacabuco.model.FacturaModel;
@@ -35,8 +27,7 @@ import com.pampa.distribuidorachacabuco.model.FacturaModel;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
+
 
 public class CargarPedidoActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -83,6 +74,7 @@ public class CargarPedidoActivity extends AppCompatActivity implements View.OnCl
         porcBonifTxt = (EditText)findViewById(R.id.porcBonifTxt);
         repartoTxt = (EditText)findViewById(R.id.repartoTxt);
         buscarArticulosBtn = (Button)findViewById(R.id.buscarArticulosBtn);
+        dateDisplay = (TextView) findViewById(R.id.dateDisplay);
 
         int id_factura = getIntent().getIntExtra("id_factura",0);
         if (id_factura == 0) {
@@ -118,6 +110,9 @@ public class CargarPedidoActivity extends AppCompatActivity implements View.OnCl
         facturaItemAdapter = new FacturaItemAdapter(this,this.facturaItemsArray);
         listView.setAdapter(facturaItemAdapter);
 
+
+        dateDisplay.setOnClickListener(this);
+        dateDisplay.setText(factura.getFecha());
 
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -191,11 +186,6 @@ public class CargarPedidoActivity extends AppCompatActivity implements View.OnCl
             }
         });
 
-        //pickDate = (Button)findViewById(R.id.pickDate);
-        //dateDisplay.setTypeface(FontManager.getTypeface(this.getApplicationContext(),FontManager.FONTAWESOME));
-        dateDisplay = (TextView) findViewById(R.id.dateDisplay);
-        dateDisplay.setOnClickListener(this);
-        dateDisplay.setText(factura.getFecha());
     }
 
     public void cargarItems(View view){

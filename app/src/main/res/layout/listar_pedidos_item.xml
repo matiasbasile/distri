@@ -42,6 +42,7 @@
     <LinearLayout
         android:layout_width="125dp"
         android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
         android:orientation="horizontal"
         android:weightSum="1">
 
@@ -49,6 +50,7 @@
             android:id="@+id/btnEditarPedido"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
             android:layout_weight="0.31"
             android:background="#3F51B5"
             android:text="&#xf040;"

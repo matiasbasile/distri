@@ -35,8 +35,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#3F51B5"
+                        android:soundEffectsEnabled="false"
                         android:text="Zona:"
-                        android:textColor="@color/icons" />
+                        android:textColor="@color/icons"
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -63,7 +65,7 @@
                         android:paddingTop="10dp"
                         android:text="&#xf007; Proximo Cliente:"
                         android:textColor="@color/icons"
-                        android:textSize="14sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -79,7 +81,7 @@
                         android:layout_weight="1"
                         android:background="#E8EAF6"
                         android:textColor="@android:color/background_dark"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -97,7 +99,7 @@
                         android:paddingTop="10dp"
                         android:text="&#xf041; Direccion:"
                         android:textColor="@color/icons"
-                        android:textSize="14sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -112,7 +114,7 @@
                         android:layout_weight="1"
                         android:background="#E8EAF6"
                         android:textColor="@android:color/background_dark"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -155,12 +157,14 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginRight="5dp"
                                 android:background="#3F51B5"
+                                android:contextClickable="false"
                                 android:gravity="center"
                                 android:onClick="irCargarVisita"
                                 android:paddingBottom="10dp"
+                                android:soundEffectsEnabled="false"
                                 android:text="&#xf0d1; Cargar Visita"
                                 android:textColor="@color/icons"
-                                android:textSize="20sp" />
+                                android:textSize="15sp" />
 
                         </RelativeLayout>
 
@@ -180,7 +184,7 @@
                                 android:paddingBottom="10dp"
                                 android:text="&#xf277; Pedido Fuera De Ruta"
                                 android:textColor="@color/icons"
-                                android:textSize="20sp" />
+                                android:textSize="15sp" />
 
                         </RelativeLayout>
                     </TableRow>
@@ -214,7 +218,7 @@
                                 android:paddingBottom="10dp"
                                 android:text="&#xf07a; Pedidos Cargados"
                                 android:textColor="@color/icons"
-                                android:textSize="20sp" />
+                                android:textSize="15sp" />
 
                         </RelativeLayout>
 
@@ -234,7 +238,7 @@
                                 android:paddingBottom="10dp"
                                 android:text="&#xf062; Enviar"
                                 android:textColor="@color/icons"
-                                android:textSize="20sp" />
+                                android:textSize="15sp" />
 
                         </RelativeLayout>
                     </TableRow>
@@ -265,7 +269,7 @@
                                 android:paddingBottom="10dp"
                                 android:text="&#xf0ad; Configuracion"
                                 android:textColor="@color/icons"
-                                android:textSize="20sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -289,7 +293,7 @@
                                 android:paddingBottom="10dp"
                                 android:text="&#xf063; RECIBIR"
                                 android:textColor="@color/icons"
-                                android:textSize="20sp" />
+                                android:textSize="15sp" />
 
                         </RelativeLayout>
                     </TableRow>
@@ -302,12 +306,4 @@
         </ScrollView>
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#3F51B5"
-        app:layout_anchor="@+id/linearLayout"
-        app:layout_anchorGravity="bottom|center">
-
-    </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>

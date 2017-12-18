@@ -31,7 +31,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
         db.execSQL("create table facturas (id integer primary key autoincrement,id_tipo_estado integer ,id_cliente integer, total real, fecha string, hora string, observaciones text, uploaded integer, reparto integer)");
         db.execSQL("create table facturaItem (id integer primary key autoincrement,cantidad real,codigo_art integer,id_articulo integer, id_factura integer, tipo_cantidad text, neto real,uploaded integer,porc_bonif real)");
         db.execSQL("create table configuracion (id integer primary key autoincrement,dispositivo text,url text, id_recorrido integer)");
-        db.execSQL("insert into configuracion (id,dispositivo,url,id_recorrido) values(1,'1','varcreative.com',0)");
+        db.execSQL("insert into configuracion (id,dispositivo,url,id_recorrido) values(1,'200','varcreative.com',0)");
     }
 
 
