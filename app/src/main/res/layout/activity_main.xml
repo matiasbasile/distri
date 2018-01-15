@@ -129,7 +129,7 @@
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TableLayout
@@ -271,10 +271,6 @@
                                 android:textColor="@color/icons"
                                 android:textSize="15sp" />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true" />
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -294,7 +290,6 @@
                                 android:text="&#xf063; RECIBIR"
                                 android:textColor="@color/icons"
                                 android:textSize="15sp" />
-
                         </RelativeLayout>
                     </TableRow>
 
